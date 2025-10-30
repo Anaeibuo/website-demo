@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"defer></script>
+  <title>NEACHE'S SERVICES</title>
+  <meta name="description" content="Seasonal, chef-crafted menus, flawless service, and unforgettable events." />
+  <style>
+    :root{
+      --emerald:#0B6B5A;
+      --gold:#D4AF37;
+      --ivory:#F8F5F0;
+      --charcoal:#2A2A2A;
+      --bg:#ffffff;
+      --muted:#777;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background: wheat;color:var(--charcoal);font-family:Inter, system-ui, -apple-system, Arial}
+    a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #eee}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 16px}
+    .logo{font-weight:700;font-family:Georgia, 'Times New Roman', serif}
+    nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0}
+    nav a{padding:8px 0;display:inline-block; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+    nav a:hover{color: orangered; font-size: 20px;}
+    .hero{position:relative;height:70vh;min-height:420px;background:url('gallery/bacground.jpg') center/cover no-repeat;display:flex;align-items:center;color:white}
+    .hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35)}
+    .hero-content{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:40px}
+    .tag{display:inline-block;background:rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;margin-bottom:12px}
+    h1{font-family: 'Playfair Display', serif;font-size:3rem;margin:0 0 12px}
+    .ser{border-left: 6px solid red;}
+    .gal{border-left: 6px solid red;}
+    .abo{border-left: 6px solid red;}
+    p{font-size:1.125rem;line-height:1.6;max-width:700px}
+    .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 20px;border-radius:8px;border:1px solid var(--charcoal);background:transparent;color:var(--charcoal);cursor:pointer}
+    .btn.primary{background:var(--emerald);border-color:var(--emerald);color:white;   transition: width 2s, height 2s, background-color 2s, transform 2s;}
+    .btn.primary:hover{
+      width: 50%;
+      height: 30%;
+      
+    }
+    section{padding:72px 16px}
+    .container{max-width:1100px;margin:0 auto}
+    .grid{display:grid;gap:20px}
+    .cards{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+    .card{border:1px solid #eee;border-radius:12px;padding:16px;background:white;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+    .gallery img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+    footer{background:#111;color:#eee;padding:40px 16px}
+    footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1100px;margin:0 auto}
+@media (max-width: 900px){
+  .hero{height:50vh;min-height:320px}
+  h1{font-size:2.25rem}
+  .gallery img{height:160px}
+}
+    @media (max-width: 760px){
+      h1{font-size:2rem}
+      .hero{height:60vh}
+      .nav{flex-wrap:wrap;gap:8px}
+      .cols{grid-template-columns:1fr}
+    }
+    @media (min-width: 1024px){
+  section{padding:96px 16px}
+}
+     .box {
+      width: 100px;
+      height: 100px;
+      background: teal;
+      position: relative;
+      animation: slide 2s infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">Neache's Catering Services</div>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Menu & Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#booking">Booking</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero" aria-label="Hero">
+    <div class="hero-content container">
+      <span class="tag">Seasonal menus • Flawless service</span>
+      <h1>Elevate Every Event with Culinary Artistry</h1>
+      <p><i>Seasonally-inspired menus, meticulous presentation, and service that makes moments memorable.</i></p>
+      <div class="cta">
+        <a class="btn primary" href="#booking">Book a Tasting</a>
+        <a class="btn" href="#services">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" aria-label="Menu & Services">
+    <div class="container">
+      <h2 style="font-family: 'Playfair Display', serif;font-size:2rem;margin-bottom:8px" class="ser">Services & Sample Menus</h2>
+      <p style="color: black">Corporate events, weddings, private parties, and intimate gatherings — customizable menus and stations.</p>
+      <div class="grid cards" style="margin-top:16px">
+        <div class="card">
+          <strong>Corporate Events</strong>
+          <p>Polished, on-site service with custom stations and seamless coordination.</p>
+        </div>
+        <div class="card">
+          <strong>Weddings</strong>
+          <p>Elegant plating, tastings, and coordination with venues for a flawless day.</p>
+        </div>
+        <div class="card">
+          <strong>Private Parties</strong>
+          <p>Interactive stations and themed experiences tailored to your vibe.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom:8px;font-family:'Playfair Display', serif">Sample Menu</h3>
+      <div class="grid cards" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:8px">
+        <div class="card">
+          <strong>Starter</strong>
+          <p>Burrata with heirloom tomatoes, basil oil, balsamic glaze</p>
+        </div>
+        <div class="card">
+          <strong>Main</strong>
+          <p>Herb-crusted salmon, lemon butter sauce, seasonal vegetables</p>
+        </div>
+        <div class="card">
+          <strong>Dessert</strong>
+          <p>Tiramisu tarts, espresso cream, cocoa dust</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" aria-label="Gallery">
+    <div class="container">
+      <h2 style="font-family:'Playfair Display', serif;font-size:2rem;margin-bottom:8px" class="gal">Gallery</h2>
+      <p style="color: black">A peek at plated dishes, stations, and event setups.</p>
+      <div class="gallery" aria-label="Gallery grid">
+        <img src="gallery/plate.jpg" alt="Plated dish: seared scallop with citrus glaze" />
+        <img src="gallery/buffet.jpg" alt="Buffet setup with elegant presentation" />
+        <img src="gallery/chef.jpg" alt="Chef plating a dish in action" />
+        <img src="gallery/party.jpg" alt="Dessert display with pastries" />
+        <img src="gallery/wedding.jpg" alt="Wedding reception plating" />
+        <img src="gallery/corprate.jpg" alt="Corporate catering service setup" />
+        <img src="gallery/snacks.jpg" alt="dealing with snacks " />
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-label="About Us">
+    <div class="container">
+      <h2 style="font-family:'Playfair Display', serif;font-size:2rem;margin-bottom:8px" class="abo">About Us</h2>
+      <p>Founded in 2024, Neache's Catering Services crafts bespoke menus using local ingredients. Our team blends culinary finesse with seamless event service to create memorable experiences.</p>
+    </div>
+  </section>
+
+  <section id="booking" aria-label="Booking & Contact">
+    <div class="container">
+      <h2 style="font-family:'Playfair Display', serif;font-size:2rem;margin-bottom:8px">Book a Tasting / Get a Quote</h2>
+     
+      <form style="display:grid;gap:12px;max-width:700px">
+        <input type="text" name="name" placeholder="Your name" required style="padding:12px;border:1px solid #ddd;border-radius:6px">
+        <input type="email" name="_replyto" placeholder="Email" required style="padding:12px;border:1px solid #ddd;border-radius:6px">
+        <input type="tel" name="phone" placeholder="Phone" style="padding:12px;border:1px solid #ddd;border-radius:6px">
+        <select name="service" required style="padding:12px;border:1px solid #ddd;border-radius:6px">
+          <option value="">Select service</option>
+          <option>Corporate Event</option>
+          <option>Wedding</option>
+          <option>Private Party</option>
+        </select>
+        <input type="date" name="date" required style="padding:12px;border:1px solid #ddd;border-radius:6px">
+        <input type="number" name="guests" placeholder="Guest count" required style="padding:12px;border:1px solid #ddd;border-radius:6px">
+        <textarea name="message" placeholder="Tell us about your event..." rows="4" style="padding:12px;border:1px solid #ddd;border-radius:6px"></textarea>
+        <label style="font-size:12px; color:var(--muted)"><input type="checkbox" required> I agree to be contacted about this request.</label>
+        <button class="btn primary" type="submit"><a href="https://wa.me/234810781603?text=Hello%20Neache's%20Catering%20Services,%20I%20am%20interested%20in%20your%20services." target="-blank" class="btn primary">Submit</a></button>
+            
+  Chat on WhatsApp
+</a>
+      </form>
+    </div>
+  </section>
+
+  <footer aria-label="Footer">
+    <div class="cols container">
+      <div>
+        <strong>Neache's Catering Services</strong><br/>
+       <i class="fas fa-location">Emelogu Aba, Abia State Nigeria</i><br/>
+        +234 810 7816 03<br/>
+        ifegwuchinecherem85@gmail.com
+      </div>
+      <div>
+        <strong>Follow</strong><br/>
+        <a href="#">NaecheIbiam</a> • <a href="#">Natalia Ibiam</a>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
